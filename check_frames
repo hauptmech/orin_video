@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo Checking $1 Stream $2
+mkvextract timestamps_v2 $1 $2:video_timestamps$2.txt
+
+python3 ./check_frames.py video_timestamps$2.txt
+
